@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard should render the component 1`] = `
+<div>
+  <HeaderContainer />
+  <RepositoriesContainer />
+</div>
+`;

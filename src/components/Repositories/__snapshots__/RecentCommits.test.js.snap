@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RecentCommits should render the component 1`] = `
+<div
+  className="commit-container"
+>
+  <img
+    alt="Bronwyn"
+    className="commit-author-avatar"
+    src="http://via.placeholder.com/640x360"
+  />
+  <div
+    className="commit"
+  >
+    <p
+      className="commit-message"
+    />
+    <span
+      className="commit-info"
+    >
+      <p
+        className="commit-author-name"
+      >
+        Bronwyn
+      </p>
+      <span>
+         committed on November 8, 2020
+      </span>
+    </span>
+  </div>
+</div>
+`;
