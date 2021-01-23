@@ -1,0 +1,124 @@
+{
+    "regions": {
+        "northeast": {
+            "name": "Northeast",
+            "average_electricity_retail_price": {
+                "currency": "cents",
+                "metric": "kWH",
+                "national_average": 10.54,
+                "regional_average": 14.68
+            },
+            "currency": "USD",
+            "average_water_retail_price": {
+                "currency": "USD",
+                "type": "monthly",
+                "national_average": 34.48,
+                "regional_average": 37.73
+            },
+            "states": [
+                {
+                    "name": "Connecticut",
+                    "abbreviation": "CT",
+                    "average_electricity_retail_price": 18.66,
+                    "average_water_retail_price": 69
+                },
+                {
+                    "name": "Delaware",
+                    "abbreviation": "DE",
+                    "average_electricity_retail_price": 10.52,
+                    "average_water_retail_price": 45
+                },
+                {
+                    "name": "Maine",
+                    "abbreviation": "ME",
+                    "average_electricity_retail_price": 14.04,
+                    "average_water_retail_price": 19
+                },
+                {
+                    "name": "Maryland",
+                    "abbreviation": "MD",
+                    "average_electricity_retail_price": 11.24,
+                    "average_water_retail_price": 42
+                },
+                {
+                    "name": "Massachusetts",
+                    "abbreviation": "MA",
+                    "average_electricity_retail_price": 18.4,
+                    "average_water_retail_price": 30
+                },
+                {
+                    "name": "New Hampshire",
+                    "abbreviation": "NH",
+                    "average_electricity_retail_price": 17.15,
+                    "average_water_retail_price": 26
+                },
+                {
+                    "name": "New Jersey",
+                    "abbreviation": "NJ",
+                    "average_electricity_retail_price": 13.42,
+                    "average_water_retail_price": 64
+                },
+                {
+                    "name": "New York",
+                    "abbreviation": "NY",
+                    "average_electricity_retail_price": 14.34,
+                    "average_water_retail_price": 44
+                },
+                {
+                    "name": "Pennsylvania",
+                    "abbreviation": "PA",
+                    "average_electricity_retail_price": 9.81,
+                    "average_water_retail_price": 30
+                },
+                {
+                    "name": "Rhode Island",
+                    "abbreviation": "RI",
+                    "average_electricity_retail_price": 18.49,
+                    "average_water_retail_price": 28
+                },
+                {
+                    "name": "Vermont",
+                    "abbreviation": "VT",
+                    "average_electricity_retail_price": 15.36,
+                    "average_water_retail_price": 18
+                }
+            ],
+            "water_generation": [
+                "Atmospheric Water Generation",
+                "Rainwater Cache",
+                "Well Water",
+                "Utility",
+                "Desalination",
+                "Condensate Drain"
+            ],
+            "renewable_energy": [
+                "Geothermal",
+                "Hydro",
+                "Wind",
+                "Solar"
+            ],
+            "summary": [
+                {
+                    "title": "Water Generation",
+                    "content": [
+                        "This region has one of the highest average annual relative humidity percentage matching or exceeding 75%. Atmospheric water generation is a great choice.",
+                        "This region shares a descent average annual precipitation rate. Rainwater cache is a good choice for this region.",
+                        "It is always recommended to tap into aquifers for a steady, consistent supply of water through water wells.",
+                        "Utility water is expensive, and the majority of your region meets the national average. Only if there is no stable source of water and costs are high should this method be considered. This region might not justify the costs for alternative water generation practices based on the low cost of water.",
+                        "Desalination (wastewater or saltwater) is an expensive technology. It is recommended if it fits within your budget. If you have aquifer access and mineral rights, this is not needed. If you do not have aquifer access or mineral rights, desalination might need consideration.",
+                        "The temperature of this region is relatively low. If you heavily rely on Air Conditioning for cooling, Condensate Drain (CD) techniques may apply. Considering Geothermal is a preferred renewable energy source for this region, CD serves well for generating electricity, not water."
+                    ]
+                },
+                {
+                    "title": "Renewable Energy",
+                    "content": [
+                        "Geothermal heating and cooling techniques are the best choices for this region.",
+                        "Utilizing the currents from streams and tidal currents from large water bodies seems like a viable solution for power needs. As of now, we have no method to calculate specific power potential for hydro techniques.",
+                        "Coastal communities share low wind speeds (within 4 – 7 mph avg.) over inland communities (4.5 – 5 mph avg.). The best wind speeds are shown near the Canadian border, with speeds reaching near 7 mph avg. Wind is not a good option for most of the region.",
+                        "The peak sun hours are estimated to be 4.2 hours throughout the region. Solar is not a good option."
+                    ]
+                }
+            ]
+        }
+    }
+}
