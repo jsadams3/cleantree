@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { StoreContext } from "../../index";
 import data from "../../../fixtures/dummy_region_metrics.json";
 import SummaryItem from "./SummaryItem";
+import mapImg from "../../images/map.jpg";
 
 import { Typography } from "antd";
 
@@ -35,7 +36,7 @@ const AquaponicReport = () => {
             <div>Regional: ${regionData.average_electricity_retail_price.regional_average}</div>
           </section>
         </div>
-        <img src="images/map.jpg" className="map"/>
+        <img src={mapImg} className="map"/>
         <section>
           <h3 className="feature-title">Water generation</h3>
           <ol>
