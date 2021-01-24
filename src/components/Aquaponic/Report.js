@@ -31,15 +31,11 @@ const AquaponicReport = () => {
         <section>
           <h3 className="feature-title">Water generation</h3>
           <ol>
-            {
-              regionData.water_generation.map(
-                (item) => (
-                  <li key={item.rank}className="feature-list-item">
-                    {item}
-                  </li>
-                )
-              )
-            }
+            {regionData.water_generation.map((item) => (
+              <li key={item.rank} className="feature-list-item">
+                {item}
+              </li>
+            ))}
           </ol>
           <h3 className="feature-title">Renewable Energy</h3>
           <ol>

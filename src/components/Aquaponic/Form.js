@@ -21,10 +21,21 @@ const radioStyle = {
 };
 
 const encode = (data) => {
-    return Object.keys(data)
-        .map(key => encodeURIComponent(key) + `=` + encodeURIComponent(data[key]))
-        .join(`&`)
-}
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + `=` + encodeURIComponent(data[key]))
+    .join(`&`);
+};
+
+const showSuccess = () => {
+  // TODO: Show a success message or navigate to a success page.
+  console.log(`form submitted successfully`);
+};
+
+const showError = (error) => {
+  // TODO: Show an error message to the user
+  console.log(`There was an error submitting the form`);
+  console.log(error);
+};
 
 const AquaponicForm = () => {
   const [formData, setFormData] = useState(null);
@@ -36,22 +47,26 @@ const AquaponicForm = () => {
   };
 
   const handleSubmit = (values) => {
-    console.log('-------------', values)
-    const formName = `contact`
+    console.log("-------------", values);
+    const formName = `contact`;
     if (values[`bot-field`] === undefined) {
-      delete values[`bot-field`]
+      delete values[`bot-field`];
     }
 
+    const encodedBody = encode({
+      "form-name": formName,
+      ...values,
+    });
+
+    console.log("==========", encodedBody);
+
     fetch(`/`, {
-        method: `POST`,
-        headers: { 'Content-Type': `application/x-www-form-urlencoded` },
-        body: encode({
-            'form-name': formName,
-            ...values,
-        }),
+      method: `POST`,
+      headers: { "Content-Type": `application/x-www-form-urlencoded` },
+      body: encodedBody,
     })
-        .then(() => showSuccess())
-        .catch(error => showError(error))
+      .then(() => showSuccess())
+      .catch((error) => showError(error));
 
     dispatch({ type: "SET_REGION", payload: formData.toLowerCase() });
     history.push("report");
@@ -60,7 +75,7 @@ const AquaponicForm = () => {
   return (
     <div className="aquaponic-form-wrapper">
       <form
-        name={'contact'}
+        name={"contact"}
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         hidden
@@ -70,7 +85,14 @@ const AquaponicForm = () => {
         <textarea name="message"></textarea>
       </form>
 
-      <Form name="basic" method="POST" layout="vertical" {...layout} justify="center">
+      <Form
+        name="basic"
+        method="POST"
+        onFinish={handleSubmit}
+        layout="vertical"
+        {...layout}
+        justify="center"
+      >
         <Row justify="center">
           <Form.Item
             label="Don't fill this out"
@@ -159,13 +181,17 @@ const AquaponicForm = () => {
           </Radio.Group>
         </Form.Item>
       </Form>
-      <Button
-        type="primary"
-        className="aquaponic-button-submit"
-        onClick={handleSubmit}
-      >
-        Generate report
-      </Button>
+
+      <Form.Item>
+        <Button
+          type="primary"
+          className="aquaponic-button-submit"
+          htmlType="submit"
+          disabled={false}
+        >
+          Generate report
+        </Button>
+      </Form.Item>
     </div>
   );
 };
