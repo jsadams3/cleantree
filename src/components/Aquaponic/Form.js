@@ -19,13 +19,12 @@ const radioStyle = {
   height: "30px",
   lineHeight: "30px",
 };
-const checkboxItems = [
-  { label: "Fruits", value: "Fruits" },
-  { label: "Vegetables", value: "Vegetables" },
-  { label: "Herbs", value: "Herbs" },
-  { label: "Floral", value: "Floral" },
-  { label: "Cannabis", value: "Cannabis" },
-];
+
+const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + `=` + encodeURIComponent(data[key]))
+        .join(`&`)
+}
 
 const AquaponicForm = () => {
   const [formData, setFormData] = useState(null);
@@ -36,16 +35,52 @@ const AquaponicForm = () => {
     setFormData(value);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (values) => {
+    console.log('-------------', values)
+    const formName = `contact`
+    if (values[`bot-field`] === undefined) {
+      delete values[`bot-field`]
+    }
+
+    fetch(`/`, {
+        method: `POST`,
+        headers: { 'Content-Type': `application/x-www-form-urlencoded` },
+        body: encode({
+            'form-name': formName,
+            ...values,
+        }),
+    })
+        .then(() => showSuccess())
+        .catch(error => showError(error))
+
     dispatch({ type: "SET_REGION", payload: formData.toLowerCase() });
     history.push("report");
   };
 
   return (
     <div className="aquaponic-form-wrapper">
-      
-      <Form name="basic" layout="vertical" {...layout} justify="center">
+      <form
+        name={'contact'}
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        hidden
+      >
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <textarea name="message"></textarea>
+      </form>
+
+      <Form name="basic" method="POST" layout="vertical" {...layout} justify="center">
         <Row justify="center">
+          <Form.Item
+            label="Don't fill this out"
+            className={`hidden`}
+            style={{ display: `none` }}
+            name="bot-field"
+          >
+            <Input type={`hidden`} />
+          </Form.Item>
+
           <Col span={12}>
             <Form.Item
               label="1. Enter your zip code"
