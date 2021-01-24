@@ -7,7 +7,11 @@ const SummaryItem = ({ title, content }) => {
   return (
     <div>
       <Title level={4}>{title}</Title>
-      <p>{content}</p>
+      <ol>
+        {content.map((item) => (
+          <li className="feature-list-item">{item}</li>
+        ))}
+      </ol>
     </div>
   );
 };

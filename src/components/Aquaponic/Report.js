@@ -26,6 +26,14 @@ const AquaponicReport = () => {
               <span className="state-abbrev">{state.abbreviation}</span>
             ))}
           </section>
+          <div></div>
+          <h3 className="feature-title">Average Electricity Price</h3>
+          <section>
+            <div>National: ${regionData.average_electricity_retail_price.national_average}</div>
+          </section>
+          <section>
+            <div>Regional: ${regionData.average_electricity_retail_price.regional_average}</div>
+          </section>
         </div>
         <img src="https://source.unsplash.com/800x400?nature" />
         <section>
