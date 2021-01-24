@@ -30,17 +30,23 @@ const AquaponicReport = () => {
         <img src="https://source.unsplash.com/800x400?nature" />
         <section>
           <h3 className="feature-title">Water generation</h3>
-          <ul>
-            {regionData.water_generation.map((item) => (
-              <li className="feature-list-item">{item}</li>
-            ))}
-          </ul>
+          <ol>
+            {
+              regionData.water_generation.map(
+                (item) => (
+                  <li key={item.rank}className="feature-list-item">
+                    {item}
+                  </li>
+                )
+              )
+            }
+          </ol>
           <h3 className="feature-title">Renewable Energy</h3>
-          <ul>
+          <ol>
             {regionData.renewable_energy.map((item) => (
               <li className="feature-list-item">{item}</li>
             ))}
-          </ul>
+          </ol>
         </section>
       </div>
       <div className="region-summary">

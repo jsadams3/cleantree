@@ -89,6 +89,7 @@ p {
 
 .feature-list-item {
   color: #6b7280;
+  list-style: decimal;
 }
 
 .region-summary {
