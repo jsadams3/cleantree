@@ -180,18 +180,17 @@ const AquaponicForm = () => {
             </Radio>
           </Radio.Group>
         </Form.Item>
+        <Form.Item>
+          <Button
+            type="primary"
+            className="aquaponic-button-submit"
+            htmlType="submit"
+            disabled={false}
+          >
+            Generate report
+          </Button>
+        </Form.Item>
       </Form>
-
-      <Form.Item>
-        <Button
-          type="primary"
-          className="aquaponic-button-submit"
-          htmlType="submit"
-          disabled={false}
-        >
-          Generate report
-        </Button>
-      </Form.Item>
     </div>
   );
 };
