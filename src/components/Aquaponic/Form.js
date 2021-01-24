@@ -45,7 +45,7 @@ const AquaponicForm = () => {
   const handleChange = (value) => {
     setFormData(value);
   };
-  
+
   const formName = `contact`;
   const handleSubmit = (values) => {
     console.log("-------------", values);
@@ -68,8 +68,8 @@ const AquaponicForm = () => {
       .then(() => showSuccess())
       .catch((error) => showError(error));
 
-    dispatch({ type: "SET_REGION", payload: formData.toLowerCase() });
-    history.push("report");
+    // dispatch({ type: "SET_REGION", payload: formData.toLowerCase() });
+    // history.push("report");
   };
 
   return (
@@ -113,7 +113,11 @@ const AquaponicForm = () => {
           </Col>
 
           <Col span={12}>
-            <Form.Item name="region" label="4. Select your region" className="label">
+            <Form.Item
+              name="region"
+              label="4. Select your region"
+              className="label"
+            >
               <Select onChange={handleChange}>
                 <Option value="Northeast">Northeast</Option>
                 <Option value="Southeast">Southeast</Option>
