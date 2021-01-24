@@ -35,7 +35,7 @@ const AquaponicReport = () => {
             <div>Regional: ${regionData.average_electricity_retail_price.regional_average}</div>
           </section>
         </div>
-        <img src="https://source.unsplash.com/800x400?nature" />
+        <img src="images/map.jpg" className="map"/>
         <section>
           <h3 className="feature-title">Water generation</h3>
           <ol>

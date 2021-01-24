@@ -45,6 +45,11 @@ p {
   height: 40px;
 }
 
+.map {
+  height: 443px;
+  width: 817px
+}
+
 .report {
   padding: 64px 0;
   display: flex;
