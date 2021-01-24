@@ -11,7 +11,7 @@
             "currency": "USD",
             "average_water_retail_price": {
                 "currency": "USD",
-                "type": "monthly",
+                "type": "m}onthly",
                 "national_average": 34.48,
                 "regional_average": 37.73
             },
