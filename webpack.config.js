@@ -90,7 +90,7 @@ module.exports = () => {
     plugins: [
       new webpack.DefinePlugin(envKeys),
       new HtmlWebPackPlugin({
-        template: "./src/index.html",
+        template: "./index.html",
       }),
     ],
   };
