@@ -1,124 +1,713 @@
 {
-    "regions": {
-        "northeast": {
-            "name": "Northeast",
-            "average_electricity_retail_price": {
-                "currency": "cents",
-                "metric": "kWH",
-                "national_average": 10.54,
-                "regional_average": 14.68
-            },
-            "currency": "USD",
-            "average_water_retail_price": {
-                "currency": "USD",
-                "type": "m}onthly",
-                "national_average": 34.48,
-                "regional_average": 37.73
-            },
-            "states": [
-                {
-                    "name": "Connecticut",
-                    "abbreviation": "CT",
-                    "average_electricity_retail_price": 18.66,
-                    "average_water_retail_price": 69
-                },
-                {
-                    "name": "Delaware",
-                    "abbreviation": "DE",
-                    "average_electricity_retail_price": 10.52,
-                    "average_water_retail_price": 45
-                },
-                {
-                    "name": "Maine",
-                    "abbreviation": "ME",
-                    "average_electricity_retail_price": 14.04,
-                    "average_water_retail_price": 19
-                },
-                {
-                    "name": "Maryland",
-                    "abbreviation": "MD",
-                    "average_electricity_retail_price": 11.24,
-                    "average_water_retail_price": 42
-                },
-                {
-                    "name": "Massachusetts",
-                    "abbreviation": "MA",
-                    "average_electricity_retail_price": 18.4,
-                    "average_water_retail_price": 30
-                },
-                {
-                    "name": "New Hampshire",
-                    "abbreviation": "NH",
-                    "average_electricity_retail_price": 17.15,
-                    "average_water_retail_price": 26
-                },
-                {
-                    "name": "New Jersey",
-                    "abbreviation": "NJ",
-                    "average_electricity_retail_price": 13.42,
-                    "average_water_retail_price": 64
-                },
-                {
-                    "name": "New York",
-                    "abbreviation": "NY",
-                    "average_electricity_retail_price": 14.34,
-                    "average_water_retail_price": 44
-                },
-                {
-                    "name": "Pennsylvania",
-                    "abbreviation": "PA",
-                    "average_electricity_retail_price": 9.81,
-                    "average_water_retail_price": 30
-                },
-                {
-                    "name": "Rhode Island",
-                    "abbreviation": "RI",
-                    "average_electricity_retail_price": 18.49,
-                    "average_water_retail_price": 28
-                },
-                {
-                    "name": "Vermont",
-                    "abbreviation": "VT",
-                    "average_electricity_retail_price": 15.36,
-                    "average_water_retail_price": 18
-                }
-            ],
-            "water_generation": [
-                "Atmospheric Water Generation",
-                "Rainwater Cache",
-                "Well Water",
-                "Utility",
-                "Desalination",
-                "Condensate Drain"
-            ],
-            "renewable_energy": [
-                "Geothermal",
-                "Hydro",
-                "Wind",
-                "Solar"
-            ],
-            "summary": [
-                {
-                    "title": "Water Generation",
-                    "content": [
-                        "This region has one of the highest average annual relative humidity percentage matching or exceeding 75%. Atmospheric water generation is a great choice.",
-                        "This region shares a descent average annual precipitation rate. Rainwater cache is a good choice for this region.",
-                        "It is always recommended to tap into aquifers for a steady, consistent supply of water through water wells.",
-                        "Utility water is expensive, and the majority of your region meets the national average. Only if there is no stable source of water and costs are high should this method be considered. This region might not justify the costs for alternative water generation practices based on the low cost of water.",
-                        "Desalination (wastewater or saltwater) is an expensive technology. It is recommended if it fits within your budget. If you have aquifer access and mineral rights, this is not needed. If you do not have aquifer access or mineral rights, desalination might need consideration.",
-                        "The temperature of this region is relatively low. If you heavily rely on Air Conditioning for cooling, Condensate Drain (CD) techniques may apply. Considering Geothermal is a preferred renewable energy source for this region, CD serves well for generating electricity, not water."
-                    ]
-                },
-                {
-                    "title": "Renewable Energy",
-                    "content": [
-                        "Geothermal heating and cooling techniques are the best choices for this region.",
-                        "Utilizing the currents from streams and tidal currents from large water bodies seems like a viable solution for power needs. As of now, we have no method to calculate specific power potential for hydro techniques.",
-                        "Coastal communities share low wind speeds (within 4 – 7 mph avg.) over inland communities (4.5 – 5 mph avg.). The best wind speeds are shown near the Canadian border, with speeds reaching near 7 mph avg. Wind is not a good option for most of the region.",
-                        "The peak sun hours are estimated to be 4.2 hours throughout the region. Solar is not a good option."
-                    ]
-                }
-            ]
+  "meta": {
+    "country": "USA",
+    "currency": "USD",
+    "author": "James Adams"
+  },
+  "regions": {
+    "northeast": {
+      "name": "Northeast",
+      "average_electricity_retail_price": {
+        "metric": "kWH",
+        "national_average": 10.54,
+        "regional_average": 14.68
+      },
+      "average_water_retail_price": {
+        "type": "monthly",
+        "national_average": 34.48,
+        "regional_average": 37.73
+      },
+      "states": [
+        {
+          "name": "Connecticut",
+          "abbreviation": "CT",
+          "average_electricity_retail_price": 18.66,
+          "average_water_retail_price": 69
+        },
+        {
+          "name": "Delaware",
+          "abbreviation": "DE",
+          "average_electricity_retail_price": 10.52,
+          "average_water_retail_price": 45
+        },
+        {
+          "name": "Maine",
+          "abbreviation": "ME",
+          "average_electricity_retail_price": 14.04,
+          "average_water_retail_price": 19
+        },
+        {
+          "name": "Maryland",
+          "abbreviation": "MD",
+          "average_electricity_retail_price": 11.24,
+          "average_water_retail_price": 42
+        },
+        {
+          "name": "Massachusetts",
+          "abbreviation": "MA",
+          "average_electricity_retail_price": 18.4,
+          "average_water_retail_price": 30
+        },
+        {
+          "name": "New Hampshire",
+          "abbreviation": "NH",
+          "average_electricity_retail_price": 17.15,
+          "average_water_retail_price": 26
+        },
+        {
+          "name": "New Jersey",
+          "abbreviation": "NJ",
+          "average_electricity_retail_price": 13.42,
+          "average_water_retail_price": 64
+        },
+        {
+          "name": "New York",
+          "abbreviation": "NY",
+          "average_electricity_retail_price": 14.34,
+          "average_water_retail_price": 44
+        },
+        {
+          "name": "Pennsylvania",
+          "abbreviation": "PA",
+          "average_electricity_retail_price": 9.81,
+          "average_water_retail_price": 30
+        },
+        {
+          "name": "Rhode Island",
+          "abbreviation": "RI",
+          "average_electricity_retail_price": 18.49,
+          "average_water_retail_price": 28
+        },
+        {
+          "name": "Vermont",
+          "abbreviation": "VT",
+          "average_electricity_retail_price": 15.36,
+          "average_water_retail_price": 18
         }
+      ],
+      "water_generation": [
+        "Atmospheric Water Generation",
+        "Rainwater Cache",
+        "Well Water",
+        "Utility",
+        "Desalination",
+        "Condensate Drain"
+      ],
+      "renewable_energy": ["Geothermal", "Hydro", "Wind", "Solar"],
+      "summary": [
+        {
+          "title": "Water Generation",
+          "content": [
+            "This region has one of the highest average annual relative humidity percentage matching or exceeding 75%. Atmospheric water generation is a great choice.",
+            "This region shares a descent average annual precipitation rate. Rainwater cache is a good choice for this region.",
+            "It is always recommended to tap into aquifers for a steady, consistent supply of water through water wells.",
+            "Utility water is expensive, and the majority of your region meets the national average. Only if there is no stable source of water and costs are high should this method be considered. This region might not justify the costs for alternative water generation practices based on the low cost of water.",
+            "Desalination (wastewater or saltwater) is an expensive technology. It is recommended if it fits within your budget. If you have aquifer access and mineral rights, this is not needed. If you do not have aquifer access or mineral rights, desalination might need consideration.",
+            "The temperature of this region is relatively low. If you heavily rely on Air Conditioning for cooling, Condensate Drain (CD) techniques may apply. Considering Geothermal is a preferred renewable energy source for this region, CD serves well for generating electricity, not water."
+          ]
+        },
+        {
+          "title": "Renewable Energy",
+          "content": [
+            "Geothermal heating and cooling techniques are the best choices for this region.",
+            "Utilizing the currents from streams and tidal currents from large water bodies seems like a viable solution for power needs. As of now, we have no method to calculate specific power potential for hydro techniques.",
+            "Coastal communities share low wind speeds (within 4 – 7 mph avg.) over inland communities (4.5 – 5 mph avg.). The best wind speeds are shown near the Canadian border, with speeds reaching near 7 mph avg. Wind is not a good option for most of the region.",
+            "The peak sun hours are estimated to be 4.2 hours throughout the region. Solar is not a good option."
+          ]
+        }
+      ]
+    },
+    "southeast": {
+      "name": "Southeast",
+      "average_electricity_retail_price": {
+        "metric": "kWH",
+        "national_average": 10.54,
+        "regional_average": 9.85
+      },
+      "average_water_retail_price": {
+        "type": "monthly",
+        "national_average": 34.48,
+        "regional_average": 24
+      },
+      "states": [
+        {
+          "name": "Alabama",
+          "abbreviation": "AL",
+          "average_electricity_retail_price": 9.83,
+          "average_water_retail_price": 26
+        },
+        {
+          "name": "Florida",
+          "abbreviation": "FL",
+          "average_electricity_retail_price": 10.44,
+          "average_water_retail_price": 6
+        },
+        {
+          "name": "Georgia",
+          "abbreviation": "GA",
+          "average_electricity_retail_price": 9.86,
+          "average_water_retail_price": 29
+        },
+        {
+          "name": "North Carolina",
+          "abbreviation": "NC",
+          "average_electricity_retail_price": 9.45,
+          "average_water_retail_price": 20
+        },
+        {
+          "name": "South Carolina",
+          "abbreviation": "SC",
+          "average_electricity_retail_price": 10.02,
+          "average_water_retail_price": 27
+        },
+        {
+          "name": "Virginia",
+          "abbreviation": "VA",
+          "average_electricity_retail_price": 9.52,
+          "average_water_retail_price": 36
+        }
+      ],
+      "water_generation": [
+        "Rainwater Cache",
+        "Atmospheric Water Generation",
+        "Well Water",
+        "Utility",
+        "Condensate Drain",
+        "Desalination"
+      ],
+      "renewable_energy": ["Geothermal", "Hydro", "Solar", "Wind"],
+      "summary": [
+        {
+          "title": "Water Generation",
+          "content": [
+            "This region shares the highest average annual precipitation rate. Rainwater cache is a great choice.",
+            "The region shares one of the highest average annual relative humidity percentage matching or exceeding 75%. Atmospheric water generation is a great choice.",
+            "It is always recommended to tap into aquifers for a steady, consistent supply of water through water wells. If incorporation rainwater or atmospheric water generation, well water is not required, but still comes highly recommended.",
+            "Utility water is expensive, but the majority of your region is below the national average. Only if there is no stable source of water and costs are high should this method be considered. This region might not justify the costs for alternative water generation practices based on the low cost of water.",
+            "The temperature of this region is relatively average. If you heavily rely on Air Conditioning for cooling, Condensate Drain (CD) techniques may apply. Considering Geothermal is a preferred renewable energy source for this region, CD serves well for generating electricity and water.",
+            "Desalination (wastewater or saltwater) is an expensive technology. It is recommended if it fits within your budget. This region does not require it. If you have well water access and mineral rights, this is not needed. If you do not have well water access or mineral rights, desalination might need consideration."
+          ]
+        },
+        {
+          "title": "Renewable Energy",
+          "content": [
+            "Geothermal heating and cooling techniques are the best choices for much of the region, especially for inland communities above South Carolina.",
+            "Utilizing the currents from streams and tidal currents from large water bodies seems like a viable solution for power needs. As of now, we have no method to calculate specific power potential for hydro techniques.",
+            "The peak sun hour average is 4.5 hours for much of the region. Northern states above and South Carolina have a 4.2 peak sun hour average. Solar is a good option for regions below South Carolina.",
+            "Coastal communities share high wind speeds between 4 – 6 mph average. Inland and northern communities see lower wind speeds averaging roughly 4 mph. Wind for this region is substantially lower in comparison to other regions. Wind is a good option for supplemental power for southern coastal communities."
+          ]
+        }
+      ]
+    },
+    "upper_midwest_east_north_central": {
+      "name": "Upper Midwest (East North Central)",
+      "average_electricity_retail_price": {
+        "metric": "kWH",
+        "national_average": 10.54,
+        "regional_average": 10.41
+      },
+      "average_water_retail_price": {
+        "type": "monthly",
+        "national_average": 34.48,
+        "regional_average": 25.25
+      },
+      "states": [
+        {
+          "name": "Iowa",
+          "abbreviation": "IA",
+          "average_electricity_retail_price": 9.08,
+          "average_water_retail_price": 28
+        },
+        {
+          "name": "Michigan",
+          "abbreviation": "MI",
+          "average_electricity_retail_price": 11.56,
+          "average_water_retail_price": 28
+        },
+        {
+          "name": "Minnesota",
+          "abbreviation": "MN",
+          "average_electricity_retail_price": 10.33,
+          "average_water_retail_price": 27
+        },
+        {
+          "name": "Wisconsin",
+          "abbreviation": "WI",
+          "average_electricity_retail_price": 10.66,
+          "average_water_retail_price": 18
+        }
+      ],
+      "water_generation": [
+        "Atmospheric Water Generation",
+        "Well Water",
+        "Utility",
+        "Rainwater Cache",
+        "Desalination",
+        "Condensate Drain"
+      ],
+      "renewable_energy": ["Geothermal", "Wind", "Hydro", "Solar"],
+      "summary": [
+        {
+          "title": "Water Generation",
+          "content": [
+            "The region shares one of the highest average annual relative humidity percentage matching or exceeding 75%. Atmospheric water generation is a great choice.",
+            "It is always recommended to tap into aquifers for a steady, consistent supply of water through water wells. If incorporation rainwater or atmospheric water generation, well water is not required, but still comes highly recommended.",
+            "Utility water is expensive, but not for your region in comparison to the national average. Only if there is no stable source of water should this method be considered. This region might not justify the costs for alternative water generation practices based on the low cost of water.",
+            "This region shares a moderate average annual precipitation rate. Rainwater cache is a good choice but not preferred.",
+            "Desalination (wastewater or saltwater) is an expensive technology. It is recommended if it fits within your budget. This region might require it. If you have well water access and mineral rights, this is not needed. If you do not have well water access or mineral rights, desalination might need consideration.",
+            "The temperature of this region is relatively average. If you heavily rely on Air Conditioning for cooling, Condensate Drain (CD) techniques may apply. Considering Geothermal is a preferred renewable energy source for this region, CD serves well for generating electricity, not water."
+          ]
+        },
+        {
+          "title": "Renewable Energy",
+          "content": [
+            "Geothermal heating and cooling techniques are the best choices for much of the region, especially for northern portions of this region",
+            "This region's northern, eastern, and central portions share an average wind speed average between 5 to 7 mph. Eastern portions of this region average wind speeds average between 7 to 9 mph. Wind is considered to be a good supplemental power source.",
+            "Utilizing the currents from streams and tidal currents from large water bodies seems like a viable solution for power needs. As of now, we have no method to calculate specific power potential for hydro techniques.",
+            "The peak sun hour average is 4.2 hours for much of the region. A small portion of the southern side of this region has a peak sun hour average of 4.5. Solar is a poor option for this region."
+          ]
+        }
+      ]
+    },
+    "ohio_valley_central": {
+      "name": "Ohio Valley (Central)",
+      "average_electricity_retail_price": {
+        "metric": "kWH",
+        "national_average": 10.54,
+        "regional_average": 9.4
+      },
+      "average_water_retail_price": {
+        "type": "monthly",
+        "national_average": 34.48,
+        "regional_average": 39.14
+      },
+      "states": [
+        {
+          "name": "Illinois",
+          "abbreviation": "IL",
+          "average_electricity_retail_price": 9.56,
+          "average_water_retail_price": 25
+        },
+        {
+          "name": "Indiana",
+          "abbreviation": "IN",
+          "average_electricity_retail_price": 8.61,
+          "average_water_retail_price": 38
+        },
+        {
+          "name": "Kentucky",
+          "abbreviation": "KY",
+          "average_electricity_retail_price": 8.61,
+          "average_water_retail_price": 49
+        },
+        {
+          "name": "Missouri",
+          "abbreviation": "MO",
+          "average_electricity_retail_price": 9.68,
+          "average_water_retail_price": 38
+        },
+        {
+          "name": "Ohio",
+          "abbreviation": "OH",
+          "average_electricity_retail_price": 9.58,
+          "average_water_retail_price": 26
+        },
+        {
+          "name": "Tennessee",
+          "abbreviation": "TN",
+          "average_electricity_retail_price": 9.96,
+          "average_water_retail_price": 26
+        },
+        {
+          "name": "West Virginia",
+          "abbreviation": "WV",
+          "average_electricity_retail_price": 8.49,
+          "average_water_retail_price": 72
+        }
+      ],
+      "water_generation": [
+        "Rainwater_Cache",
+        "Atmospheric Water Generation",
+        "Well Water",
+        "Utility",
+        "Condensate Drain",
+        "Desalination"
+      ],
+      "renewable_energy": ["Geothermal", "Wind", "Hydro", "Solar"],
+      "summary": [
+        {
+          "title": "Water Generation",
+          "content": [
+            "This region shares a descent average annual precipitation rate. Rainwater cache is a good choice for this region.",
+            "This region has one of the highest average annual relative humidity percentage matching or exceeding 75%. Atmospheric water generation is a great choice.",
+            "It is always recommended to tap into aquifers for a steady, consistent supply of water through water wells. If incorporation rainwater or atmospheric water generation, well water is not required, but still comes highly recommended.",
+            "Utility water is expensive, but the majority of your region is below the national average. Only if there is no stable source of water and costs are high should this method be considered. This region might not justify the costs for alternative water generation practices based on the low cost of water.",
+            "The temperature of this region is relatively average. If you heavily rely on Air Conditioning for cooling, Condensate Drain (CD) techniques may apply. Considering Geothermal is a preferred renewable energy source for this region, CD serves well for generating electricity, and potentially water.",
+            "Desalination (waste water or saltwater) is an expensive technology. It is recommended if it fits within your budget. This region does not require it. If you have well water access and mineral rights, this is not needed. If you do not have well water access or mineral rights, desalination might need consideration."
+          ]
+        },
+        {
+          "title": "Renewable Energy",
+          "content": [
+            "Geothermal heating and cooling techniques are the best choices for much of the region, especially for northern portions of this region",
+            "Wind is relatively high for this region. The lowest wind speed average is roughly 5-mph near the southern portion of this region. 10-mph wind speed averages are shown in central parts of Indiana and Illinois.",
+            "Utilizing the currents from streams and tidal currents from large water bodies seems like a viable solution for power needs. As of now, we have no method to calculate specific power potential for hydro techniques.",
+            "The peak sun hour average is 4.2 hours for much of the region. The southern portion of this region has a peak sun hour average of 4.5. Solar is a relatively poor option for this region."
+          ]
+        }
+      ]
+    },
+    "south": {
+      "name": "South",
+      "average_electricity_retail_price": {
+        "metric": "kWH",
+        "national_average": 10.54,
+        "regional_average": 8.66
+      },
+      "average_water_retail_price": {
+        "type": "monthly",
+        "national_average": 34.48,
+        "regional_average": 30.5
+      },
+      "states": [
+        {
+          "name": "Arkansas",
+          "abbreviation": "AK",
+          "average_electricity_retail_price": 8.22,
+          "average_water_retail_price": 22
+        },
+        {
+          "name": "Kansas",
+          "abbreviation": "KS",
+          "average_electricity_retail_price": 10.26,
+          "average_water_retail_price": 26
+        },
+        {
+          "name": "Louisiana",
+          "abbreviation": "LA",
+          "average_electricity_retail_price": 7.71,
+          "average_water_retail_price": 33
+        },
+        {
+          "name": "Mississippi",
+          "abbreviation": "MS",
+          "average_electricity_retail_price": 9.28,
+          "average_water_retail_price": 23
+        },
+        {
+          "name": "Oklahoma",
+          "abbreviation": "OK",
+          "average_electricity_retail_price": 7.86,
+          "average_water_retail_price": 33
+        },
+        {
+          "name": "Texas",
+          "abbreviation": "TX",
+          "average_electricity_retail_price": 8.6,
+          "average_water_retail_price": 46
+        }
+      ],
+      "water_generation": [
+        "Rainwater_Cache",
+        "Condensate Drain",
+        "Atmospheric Water Generation",
+        "Well Water",
+        "Utility",
+        "Desalination"
+      ],
+      "renewable_energy": ["Solar", "Wind", "Hydro", "Geothermal"],
+      "summary": [
+        {
+          "title": "Water Generation",
+          "content": [
+            "The majority of this region shares a relatively high average annual precipitation rate. Rainwater cache is a great choice for most of this region. Eastern portions of Oklahoma and Texas should consider other methods to generate water.",
+            "The temperature of this region is relatively high. If you heavily rely on Air Conditioning for cooling, Condensate Drain (CD) techniques may apply. Considering Geothermal is not a preferred renewable energy source for this region, CD serves well for generating water, not electricity.",
+            "The majority of the region has one of the highest average annual relative humidity percentages that matches or exceeds 75%. Atmospheric water generation is a great choice. Areas furthest east of Texas and Oklahoma read a low percentage of annual relative humidity between 25% to 60%. These areas should not consider atmospheric water as a choice.",
+            "It is always recommended to tap into aquifers for a steady, consistent supply of water through water wells. If incorporation rainwater or atmospheric water generation, well water is strongly advised and comes highly recommended for eastern portions of this region.",
+            "Utility water is expensive, but not for your region in comparison to the national average. Only if there is no stable source of water should this method be considered. This region might not justify the costs for alternative water generation practices based on the low cost of water.",
+            "Desalination (wastewater or saltwater) is an expensive technology. It is recommended if it fits within your budget. This region does not require it. If you have well water access and mineral rights, this is not needed. If you do not have well water access or mineral rights, desalination might need consideration."
+          ]
+        },
+        {
+          "title": "Renewable Energy",
+          "content": [
+            "The peak sun hour average is 4.5 hours for much of the region. A sizable portion of the eastern side of this region has a peak sun hour average of 5. Solar is a great option for this region.",
+            "Wind is relatively high for this region. The lowest wind speed average is roughly 5-mph near the southern and southeastern portion of this region. The eastern and northeastern segments display 7 - 9 mph wind speed averages. Wind is considered a great choice depending on your specific location.",
+            "Utilizing the currents from streams and tidal currents from large water bodies seems like a viable solution for power needs. As of now, we have no method to calculate specific power potential for hydro techniques.",
+            "Geothermal heating and cooling techniques are not a required choices for much of the region, especially for northern portions of this region. Southern and southeastern portions of this region might consider it."
+          ]
+        }
+      ]
+    },
+    "southwest": {
+      "name": "Southwest",
+      "average_electricity_retail_price": {
+        "metric": "kWH",
+        "national_average": 10.54,
+        "regional_average": 9.48
+      },
+      "average_water_retail_price": {
+        "type": "monthly",
+        "national_average": 34.48,
+        "regional_average": 40
+      },
+      "states": [
+        {
+          "name": "Arizona",
+          "abbreviation": "AZ",
+          "average_electricity_retail_price": 10.52,
+          "average_water_retail_price": 37
+        },
+        {
+          "name": "Colorado",
+          "abbreviation": "CO",
+          "average_electricity_retail_price": 8.99,
+          "average_water_retail_price": 28
+        },
+        {
+          "name": "New Mexico",
+          "abbreviation": "NM",
+          "average_electricity_retail_price": 8.99,
+          "average_water_retail_price": 28
+        },
+        {
+          "name": "Utah",
+          "abbreviation": "UT",
+          "average_electricity_retail_price": 8.24,
+          "average_water_retail_price": 58
+        }
+      ],
+      "water_generation": [
+        "Well Water",
+        "Condensate Drain",
+        "Desalination",
+        "Utility",
+        "Atmospheric Water Generation",
+        "Rainwater Cache"
+      ],
+      "renewable_energy": ["Solar", "Wind", "Hydro", "Geothermal"],
+      "summary": [
+        {
+          "title": "Water Generation",
+          "content": [
+            "Well water is highly recommended to tap into aquifers for a steady, consistent supply of water through water wells for this region",
+            "The temperature of this region is relatively high. If you heavily rely on Air Conditioning for cooling, Condensate Drain (CD) techniques may apply. Considering Geothermal is not a preferred renewable energy source for this region, CD serves well for generating water, not electricity.",
+            "Desalination (wastewater or saltwater) is an expensive technology. It is recommended if it fits within your budget. This region requires it. If you have well water access and mineral rights, it might not be needed. If you do not have well water access or mineral rights, desalination might need consideration.",
+            "Utility water is expensive, and the majority of your region is above the national average. Only if there is no stable source of water should this method be considered. The majority of this region might justify the costs for alternative water generation practices based on the cost of water and access to freshwater supply.",
+            "The majority of this region shares a low average annual precipitation rate. Rainwater cache is a poor choice for most of this region. Only in pockets of this region is rainwater worth the consideration, but not necessarily advised.",
+            "The majority of region has a low annual relative humidity percentage matching or exceeding 25%. Atmospheric water generation is a poor choice. Areas furthest east read a higher percentage of annual relative humidity between 25% to 60%. These areas should consider atmospheric water as a choice."
+          ]
+        },
+        {
+          "title": "Renewable Energy",
+          "content": [
+            "The peak sun hour average is 5 hours for much of the region. A sizable portion of the western and southwestern side of this region has a peak sun hour average of 5.5. Solar is a great option for this region.",
+            "Wind is relatively high for this region. The lowest wind speed average is roughly 4-mph near the western and central portion of this region. The eastern segment display 7 – 9 mph wind speed averages. Wind is considered a great choice depending on your specific location.",
+            "Geothermal heating and cooling techniques are not a required choice for much of the region. Western and northwestern portions of this region might consider it.",
+            "Utilizing the currents from streams and tidal currents from large water bodies does not seems like a viable solution for power needs. As of now, we have no method to calculate specific power potential for hydro techniques."
+          ]
+        }
+      ]
+    },
+    "northern_rockies_and_plains_west_north_central": {
+      "name": "Northern Rockies and Plains (West North Central)",
+      "average_electricity_retail_price": {
+        "metric": "kWH",
+        "national_average": 10.54,
+        "regional_average": 9
+      },
+      "average_water_retail_price": {
+        "type": "monthly",
+        "national_average": 34.48,
+        "regional_average": 31.4
+      },
+      "states": [
+        {
+          "name": "Montana",
+          "abbreviation": "MT",
+          "average_electricity_retail_price": 9.02,
+          "average_water_retail_price": 34
+        },
+        {
+          "name": "Nebraska",
+          "abbreviation": "NE"
+        },
+        {
+          "average_electricity_retail_price": 9.08,
+          "average_water_retail_price": 23
+        },
+        {
+          "name": "North Dakota",
+          "abbreviation": "ND",
+          "average_electricity_retail_price": 8.85,
+          "average_water_retail_price": 24
+        },
+        {
+          "name": "South Dakota",
+          "abbreviation": "SD",
+          "average_electricity_retail_price": 9.96,
+          "average_water_retail_price": 24
+        },
+        {
+          "name": "Wyoming",
+          "abbreviation": "WY",
+          "average_electricity_retail_price": 8.1,
+          "average_water_retail_price": 52
+        }
+      ],
+      "water_generation": [
+        "Atmospheric Water Generation",
+        "Well Water",
+        "Utility",
+        "Desalination",
+        "Rainwater Cache",
+        "Condensate Drain"
+      ],
+      "renewable_energy": ["Wind", "Solar", "Geothermal", "Hydro"],
+      "summary": [
+        {
+          "title": "Water Generation",
+          "content": [
+            "Northern and northwest portions of this region share high average annual relative humidity percentage between 55 to 75%. Southern portions of this region share low percentages between 25% to 50%. Only in northern and northwestern portions should atmospheric water generation be considered.",
+            "Well water is highly recommended to tap into aquifers for a steady, consistent supply of water through water wells for this region.",
+            "Utility water is expensive, but the majority of your region is below the national average. Only if there is no stable source of water should this method be considered. The majority of this region might justify the cost for alternative water generation practices based on access to freshwater supply, not the cost of water.",
+            "Desalination (wastewater or saltwater) is an expensive technology. It is recommended if it fits within your budget. This region requires it. If you have well water access and mineral rights, it should not be a consideration. If you do not have well water access or mineral rights, desalination might need consideration.",
+            "The majority of this region shares a low average annual precipitation rate. Rainwater cache is a poor choice for most of this region. Only in pockets of this region is rainwater a consideration.",
+            "The temperature of this region is relatively low. If you heavily rely on Air Conditioning for cooling, Condensate Drain (CD) techniques may apply. Considering Geothermal is not a preferred renewable energy source for this region, CD serves well for generating water, not electricity."
+          ]
+        },
+        {
+          "title": "Renewable Energy",
+          "content": [
+            "Wind is relatively high for this region. The lowest average wind speed is roughly 4-mph near the western portion of this region. The central and eastern segments display 7 – 9 mph wind speed averages. Wind is considered a great choice for the majority of this region.",
+            "The peak sun hour average is 4.5 hours for much of the region. The northeastern portion of this region has a peak sun hour average of 4.2. The southwestern segment of this region reads a peak sun hour average of 5. Solar is a good option for this region and great option for specific portions.",
+            "Geothermal heating and cooling techniques are not a required choice for much of the region, especially eastern and northeastern portions of this region might consider it.",
+            "Utilizing the currents from streams and tidal currents from large water bodies does not seems like a viable solution for power needs. As of now, we have no method to calculate specific power potential for hydro techniques."
+          ]
+        }
+      ]
+    },
+    "west": {
+      "name": "West",
+      "average_electricity_retail_price": {
+        "metric": "kWH",
+        "national_average": 10.54,
+        "regional_average": 12.84
+      },
+      "average_water_retail_price": {
+        "type": "monthly",
+        "national_average": 34.48,
+        "regional_average": 45
+      },
+      "states": [
+        {
+          "name": "California",
+          "abbreviation": "CA",
+          "average_electricity_retail_price": 16.89,
+          "average_water_retail_price": 65
+        },
+        {
+          "name": "Nevada",
+          "abbreviation": "NV",
+          "average_electricity_retail_price": 8.78,
+          "average_water_retail_price": 25
+        }
+      ],
+      "water_generation": [
+        "Well Water",
+        "Condensate Drain",
+        "Desalination",
+        "Atmospheric Water Generation",
+        "Rainwater Cache",
+        "Utility"
+      ],
+      "renewable_energy": ["Solar", "Geothermal", "Wind", "Hydro"],
+      "summary": [
+        {
+          "title": "Water Generation",
+          "content": [
+            "Well water is highly recommended to tap into aquifers for a steady, consistent supply of water through water wells for this region.",
+            "The temperature of this region is relatively high. If you heavily rely on Air Conditioning for cooling, Condensate Drain (CD) techniques may apply. Considering Geothermal is one of the preferred renewable energy source for this region, CD serves well for generating water and electricity.",
+            "Desalination (wastewater or saltwater) is an expensive technology. It is recommended if it fits within your budget. This region requires it. If you have well water access and mineral rights, it should not be a consideration. If you do not have well water access or mineral rights, desalination might need consideration.",
+            "Utility water is expensive, and the majority of your region is above the national average. Only if there is no stable source of water should this method be considered. The majority of this region might justify the cost for alternative water generation practices based on access to freshwater supply and the cost of water.",
+            "The majority of this region shares a low average annual precipitation rate. Rainwater cache is a poor choice for most of this region. Only in pockets of this region is rainwater a consideration.",
+            "The majority of the region has a low annual relative humidity percentage matching or below 25%. Atmospheric water generation is a poor choice. Areas furthest west read a higher percentage of annual relative humidity between 25% to 65%. These areas should consider atmospheric water as a choice."
+          ]
+        },
+        {
+          "title": "Renewable Energy",
+          "content": [
+            "The peak sun hour average is 5 hours for much of the region. Southern portion of this region has a peak sun hour average of 6. Solar is a great option for this region.",
+            "Geothermal heating and cooling techniques are not a required choice for much of the region. North and northwestern portions of this region should consider it.",
+            "The majority of this region share an average wind speed average between 4 to 7 mph. Wind is considered to be a good supplemental power source.",
+            "Utilizing the currents from streams and tidal currents from large water bodies does not seems like a viable solution for power needs. As of now, we have no method to calculate specific power potential for hydro techniques."
+          ]
+        }
+      ]
+    },
+    "northwest": {
+      "name": "Northwest",
+      "average_electricity_retail_price": {
+        "metric": "kWH",
+        "national_average": 10.54,
+        "regional_average": 8.25
+      },
+      "average_water_retail_price": {
+        "type": "monthly",
+        "national_average": 34.48,
+        "regional_average": 43.67
+      },
+      "states": [
+        {
+          "name": "Idaho",
+          "abbreviation": "ID",
+          "average_electricity_retail_price": 7.89,
+          "average_water_retail_price": 37
+        },
+        {
+          "name": "Oregon",
+          "abbreviation": "OR",
+          "average_electricity_retail_price": 8.81,
+          "average_water_retail_price": 37
+        },
+        {
+          "name": "Washington",
+          "abbreviation": "WA",
+          "average_electricity_retail_price": 8.04,
+          "average_water_retail_price": 57
+        }
+      ],
+      "water_generation": [
+        "Well Water",
+        "Utility",
+        "Desalination",
+        "Rainwater Cache",
+        "Condensate Drain",
+        "Atmospheric Water Generation"
+      ],
+      "renewable_energy": ["Geothermal", "Hydro", "Wind", "Solar"],
+      "summary": [
+        {
+          "title": "Water Generation",
+          "content": [
+            "Well water is highly recommended to tap into aquifers for a steady, consistent supply of water through water wells for this region.",
+            "Utility water is expensive, and the majority of this region is above the national average. Only if there is no stable source of water should this method be considered. The majority of this region might justify the cost for alternative water generation practices based on access to freshwater supply and the cost of water.",
+            "Desalination (wastewater or saltwater) is an expensive technology. It is recommended if it fits within your budget. This region might require it. If you have well water access and mineral rights, it might not be needed. If you do not have well water access or mineral rights, desalination might need consideration.",
+            "The majority of this region shares a relative low average annual precipitation rate. Rainwater cache is a poor choice for most of this region. Northwestern and northeastern portions of this region record the highest average annual precipitation rate in the continental US. Only in the northwestern and northeastern portions of this region should rainwater cache be considered.",
+            "The temperature of this region is relatively low. If you heavily rely on Air Conditioning for cooling, Condensate Drain (CD) techniques may apply. Considering Geothermal is the preferred renewable energy source for this region, CD serves well for generating electricity, not necessarily water.",
+            "The majority of region has a moderate annual relatively humidity percentage matching or exceeding 50%. Atmospheric water generation is a good choice for most of this region. Southeastern portions of this region read a lower percentage of annual relative humidity between 25% to 50%. These areas should not consider atmospheric water as a choice."
+          ]
+        },
+        {
+          "title": "Renewable Energy",
+          "content": [
+            "Geothermal heating and cooling techniques are the best choice for much of the region, especially for northern portions of this region",
+            "Utilizing the currents from streams and tidal currents from large water bodies seems like a viable solution for power needs. As of now, we have no method to calculate specific power potential for hydro techniques.",
+            "The majority of this region share an average wind speed average between 4 to 7 mph. Wind is considered to be a good supplemental power source.",
+            "The peak sun hour average for the northwestern portion of this region is 3.5. The northeastern part of this region has a peak sun hour average of 4.2. The central and southern sections of this region have a peak sun hour average of 4.5. Only in segments of this region is solar considered a good option."
+          ]
+        }
+      ]
     }
+  }
 }
