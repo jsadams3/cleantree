@@ -43,6 +43,7 @@ const AquaponicForm = () => {
 
   return (
     <div className="aquaponic-form-wrapper">
+      
       <Form name="basic" layout="vertical" {...layout} justify="center">
         <Row justify="center">
           <Col span={12}>
