@@ -43,17 +43,6 @@ const AquaponicForm = () => {
 
   return (
     <div className="aquaponic-form-wrapper">
-      <form name="contact" netlify>
-        <p>
-          <label>Name <input type="text" name="name" /></label>
-        </p>
-        <p>
-          <label>Email <input type="email" name="email" /></label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </form>
       <Form name="basic" layout="vertical" {...layout} justify="center">
         <Row justify="center">
           <Col span={12}>
