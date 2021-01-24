@@ -45,10 +45,10 @@ const AquaponicForm = () => {
   const handleChange = (value) => {
     setFormData(value);
   };
-
+  
+  const formName = `contact`;
   const handleSubmit = (values) => {
     console.log("-------------", values);
-    const formName = `contact`;
     if (values[`bot-field`] === undefined) {
       delete values[`bot-field`];
     }
@@ -75,14 +75,13 @@ const AquaponicForm = () => {
   return (
     <div className="aquaponic-form-wrapper">
       <form
-        name={"contact"}
+        name={formName}
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         hidden
       >
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <textarea name="message"></textarea>
+        <input type="text" name="region" />
+        <input type="text" name="zipcode" />
       </form>
 
       <Form
@@ -114,7 +113,7 @@ const AquaponicForm = () => {
           </Col>
 
           <Col span={12}>
-            <Form.Item label="4. Select your region" className="label">
+            <Form.Item name="region" label="4. Select your region" className="label">
               <Select onChange={handleChange}>
                 <Option value="Northeast">Northeast</Option>
                 <Option value="Southeast">Southeast</Option>
