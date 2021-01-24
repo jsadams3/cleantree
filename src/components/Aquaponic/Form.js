@@ -37,7 +37,7 @@ const AquaponicForm = () => {
 
   return (
     <div className="aquaponic-form-wrapper">
-      <form netflify onSubmit={handleSubmit}>
+      <form netlify onSubmit={handleSubmit}>
         <select onChange={handleChange} name="region">
           <option value="northeast">Northeast</option>
           <option value="southeast">Southeast</option>
