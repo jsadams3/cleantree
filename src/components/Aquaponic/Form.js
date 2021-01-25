@@ -33,7 +33,7 @@ const AquaponicForm = () => {
       <Form name="basic" layout="vertical" {...layout} justify="center">
         <Row justify="center">
           <Col span={12}>
-            <Form.Item label="4. Select your region" className="label">
+            <Form.Item label="Select your region" className="label">
               <Select onChange={handleChange}>
                 <Option value="Northeast">Northeast</Option>
                 <Option value="Southeast">Southeast</Option>
