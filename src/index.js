@@ -46,7 +46,6 @@ const Root = () => {
       <Router>
         <Switch>
           <Route exact path="/" component={Form} />
-          <Route exact path="/report" component={Report} />
         </Switch>
       </Router>
     </StoreContext.Provider>

@@ -1,9 +1,7 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import "./styles.css";
-import { Form, Input, Button, Checkbox, Slider, Row, Col, Radio } from "antd";
-import { useHistory } from "react-router-dom";
-
-import { StoreContext } from "../../index";
+import { Form, Row, Col } from "antd";
+import Report from "./Report";
 
 import { Select } from "antd";
 
@@ -12,20 +10,13 @@ const { Option } = Select;
 const layout = {
   labelCol: { span: 8 },
   wrapperCol: { span: 16 },
-}
+};
 
 const AquaponicForm = () => {
-  const [formData, setFormData] = useState(null);
-  const [appState, dispatch] = useContext(StoreContext);
-  const history = useHistory();
+  const [formData, setFormData] = useState("");
 
   const handleChange = (value) => {
     setFormData(value);
-  };
-
-  const handleSubmit = () => {
-    dispatch({ type: "SET_REGION", payload: formData.toLowerCase() });
-    history.push("report");
   };
 
   return (
@@ -55,13 +46,7 @@ const AquaponicForm = () => {
           </Col>
         </Row>
       </Form>
-      <Button
-        type="primary"
-        className="aquaponic-button-submit"
-        onClick={handleSubmit}
-      >
-        Generate report
-      </Button>
+      <Report selection={formData.toLowerCase()} />
     </div>
   );
 };
