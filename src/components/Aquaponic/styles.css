@@ -3,7 +3,7 @@ li {
 }
 
 ul li::before {
-  content: "\2022";
+  content: '\2022';
   color: #a5b4fc;
   padding-right: 8px;
 }
@@ -47,7 +47,7 @@ p {
 
 .map {
   height: 443px;
-  width: 817px
+  width: 817px;
 }
 
 .report {

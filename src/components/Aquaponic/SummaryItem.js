@@ -1,7 +1,7 @@
-import React from "react";
-import { Typography } from "antd";
+import React from 'react'
+import { Typography } from 'antd'
 
-const { Title } = Typography;
+const { Title } = Typography
 
 const SummaryItem = ({ title, content }) => {
   return (
@@ -13,7 +13,7 @@ const SummaryItem = ({ title, content }) => {
         ))}
       </ol>
     </div>
-  );
-};
+  )
+}
 
-export default SummaryItem;
+export default SummaryItem

@@ -1,23 +1,23 @@
-import React, { useState } from "react";
-import "./styles.css";
-import { Form, Row, Col } from "antd";
-import Report from "./Report";
+import React, { useState } from 'react'
+import './styles.css'
+import { Form, Row, Col } from 'antd'
+import Report from './Report'
 
-import { Select } from "antd";
+import { Select } from 'antd'
 
-const { Option } = Select;
+const { Option } = Select
 
 const layout = {
   labelCol: { span: 8 },
   wrapperCol: { span: 16 },
-};
+}
 
 const AquaponicForm = () => {
-  const [formData, setFormData] = useState("");
+  const [formData, setFormData] = useState('')
 
   const handleChange = (value) => {
-    setFormData(value);
-  };
+    setFormData(value)
+  }
 
   return (
     <div className="aquaponic-form-wrapper">
@@ -48,7 +48,7 @@ const AquaponicForm = () => {
       </Form>
       <Report selection={formData.toLowerCase()} />
     </div>
-  );
-};
+  )
+}
 
-export default AquaponicForm;
+export default AquaponicForm

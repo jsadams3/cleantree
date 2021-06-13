@@ -1,15 +1,15 @@
-import React from "react";
-import data from "../../../fixtures/dummy_region_metrics.json";
-import SummaryItem from "./SummaryItem";
-import mapImg from "../../images/map.jpg";
+import React from 'react'
+import data from '../../../fixtures/dummy_region_metrics.json'
+import SummaryItem from './SummaryItem'
+import mapImg from '../../images/map.jpg'
 
-import { Typography } from "antd";
+import { Typography } from 'antd'
 
-const { Title } = Typography;
+const { Title } = Typography
 
 const AquaponicReport = ({ selection }) => {
-  const region = selection || "northeast";
-  const regionData = data["regions"][region];
+  const region = selection || 'northeast'
+  const regionData = data['regions'][region]
 
   return (
     <div className="report">
@@ -76,7 +76,7 @@ const AquaponicReport = ({ selection }) => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AquaponicReport;
+export default AquaponicReport
