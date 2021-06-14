@@ -530,9 +530,7 @@
         },
         {
           "name": "Nebraska",
-          "abbreviation": "NE"
-        },
-        {
+          "abbreviation": "NE",
           "average_electricity_retail_price": 9.08,
           "average_water_retail_price": 23
         },
